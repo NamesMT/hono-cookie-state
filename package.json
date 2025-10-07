@@ -1,7 +1,7 @@
 {
   "name": "hono-cookie-state",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@10.18.1",
   "description": "Simple library to persist data / states in cookies for Hono, securely and with type-safety.",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
