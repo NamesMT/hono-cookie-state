@@ -81,7 +81,7 @@ export function createCookieState<T extends Record<string, any>, K extends strin
       : null
 
     const iData = initData ? await initData(c) : {} as T
-    const CSI = new CookieState<T>(pD ? { ...pD, data: { ...iData, ...pD } } : { data: iData })
+    const CSI = new CookieState<T>(pD ? { ...pD, data: { ...iData, ...pD.data } } : { data: iData })
 
     c.set(key, CSI)
 
