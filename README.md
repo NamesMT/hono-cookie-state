@@ -71,9 +71,9 @@ const app = new Hono()
   })
 
 // For more complex usage, you can populate Hono's init Env:
-const app = new Hono<{ Variables: { helloWorld: CookieState<{ hello: string }> } }>()
-// Or pass the generic into createCookieState, note you need to also pass the key as the second generic, due to TS limitation:
-createCookieState<{ helloWorld: CookieState<{ hello: string }> }, 'hiWorld'>({
+const app = new Hono<{ Variables: { hiWorld: CookieState<{ hello: string }> } }>()
+// Or pass the data type into createCookieState, note you need to also pass the key as the second generic, due to TS limitation:
+createCookieState<{ hello: string }, 'hiWorld'>({
   key: 'hiWorld',
   secret: 'password_at_least_32_characters!',
 })
