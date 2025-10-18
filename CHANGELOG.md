@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v0.1.3
+
+[compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.2...v0.1.3)
+
+### 🩹 Fixes
+
+- `ttl` error ([35336d6](https://github.com/namesmt/hono-cookie-state/commit/35336d6))
+
+### 📖 Documentation
+
+- **README:** Fix guide ([a9f00e0](https://github.com/namesmt/hono-cookie-state/commit/a9f00e0))
+
+### 🌊 Types
+
+- Fix declaration of `dataSnapshot` ([d2db03f](https://github.com/namesmt/hono-cookie-state/commit/d2db03f))
+
+### 🏡 Chore
+
+- Update deps ([0c5f289](https://github.com/namesmt/hono-cookie-state/commit/0c5f289))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.1.2
 
 [compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.1...v0.1.2)
