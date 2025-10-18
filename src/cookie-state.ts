@@ -81,7 +81,9 @@ export function createCookieState<T extends Record<string, any>, K extends strin
       : null
 
     const iData = initData ? await initData(c) : {} as T
-    const CSI = new CookieState<T>(pD ? { ...pD, data: { ...iData, ...pD.data } } : { data: iData })
+    const CSI = new CookieState<T>(pD
+      ? { ...pD, data: { ...iData, ...pD.data } }
+      : { data: iData })
 
     c.set(key, CSI)
 
@@ -97,7 +99,14 @@ export function createCookieState<T extends Record<string, any>, K extends strin
       setCookie(
         c,
         key,
-        await seal({ data: CSI.data, metadata: CSI.metadata }, secretPwd, { ...sealDefaults, ...(cookieOptions?.maxAge && { ttl: cookieOptions.maxAge }) }),
+        await seal(
+          {
+            metadata: CSI.metadata,
+            data: CSI.data,
+          },
+          secretPwd,
+          { ...sealDefaults, ...(cookieOptions?.maxAge && { ttl: cookieOptions.maxAge * 1000 }) },
+        ),
         cookieOptions,
       )
     }

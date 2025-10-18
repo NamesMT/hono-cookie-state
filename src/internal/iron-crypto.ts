@@ -379,7 +379,7 @@ export type SealOptions = Readonly<{
   /** Integrity step options. */
   integrity: SealOptionsSub<IntegrityAlgorithm>
 
-  /* Sealed object lifetime in milliseconds where 0 means forever. Defaults to 0. */
+  /** Sealed object lifetime in milliseconds where 0 means forever. Defaults to 0. */
   ttl: number
 
   /** Number of seconds of permitted clock skew for incoming expirations. Defaults to 60 seconds. */
