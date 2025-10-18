@@ -64,7 +64,7 @@ const app = new Hono()
       httpOnly: true,
     },
   }))
-  // For simple usage, variable type is automatically populated to context chain
+  // For simple inline usage, variable type is automatically populated to context chain
   .get('/sample', async (c) => {
     const state = c.var.hiWorld // is of type CookieState<any>
     state.data.hi = 'world'
