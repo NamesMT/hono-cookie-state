@@ -11,7 +11,7 @@ export class CookieState<T extends Record<string, any>> {
   public metadata: Record<string, any> = {}
 
   public data: T
-  public dataSnapshot: string
+  public dataSnapshot: T
 
   public refreshSession = false
 
