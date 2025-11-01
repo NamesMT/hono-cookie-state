@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.1.4
+
+[compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.3...v0.1.4)
+
+### 🏡 Chore
+
+- Shave a bit off bundle size ([67363f5](https://github.com/namesmt/hono-cookie-state/commit/67363f5))
+- Update deps ([62c0ecc](https://github.com/namesmt/hono-cookie-state/commit/62c0ecc))
+
+### ❤️ Contributors
+
+- NamesMT <dangquoctrung123@gmail.com>
+
 ## v0.1.3
 
 [compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.2...v0.1.3)
