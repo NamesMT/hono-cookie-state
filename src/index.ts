@@ -88,7 +88,7 @@ export function createCookieState<T extends Record<string, any>, K extends strin
     c.set(key, CSI)
 
     // Set refreshSession flag if nearly expired (16 minutes)
-    if (autoRefreshSession && CSI.metadata.exp && (CSI.metadata.exp > (unix() - 960)))
+    if (autoRefreshSession && CSI.metadata.exp && ((unix() + 960) > CSI.metadata.exp))
       CSI.refreshSession = true
 
     await next()
