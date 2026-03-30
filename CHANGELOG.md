@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.1.6
+
+[compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.5...v0.1.6)
+
+### 🏡 Chore
+
+- Fix ts@6 baseurl config ([b0a36ed](https://github.com/namesmt/hono-cookie-state/commit/b0a36ed))
+- Update deps ([924aeb8](https://github.com/namesmt/hono-cookie-state/commit/924aeb8))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.1.5
 
 [compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.4...v0.1.5)
