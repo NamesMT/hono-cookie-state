@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.1.5
+
+[compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.4...v0.1.5)
+
+### 🩹 Fixes
+
+- Backwards logic ([e62a9bb](https://github.com/namesmt/hono-cookie-state/commit/e62a9bb))
+
+### 🤖 CI
+
+- Enable push trigger for Typedoc workflow ([db74f29](https://github.com/namesmt/hono-cookie-state/commit/db74f29))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+- Trung Dang ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.1.4
 
 [compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.3...v0.1.4)
