@@ -1,3 +1,4 @@
+/* eslint-disable e18e/prefer-static-regex */
 /**
  * @credit https://github.com/h3js/h3/blob/main/src/utils/internal/iron-crypto.ts
  */
@@ -205,8 +206,7 @@ export async function generateKey(
       if (!saltBits)
         throw new Error('Missing salt and saltBits options')
       const randomSalt = randomBits(saltBits)
-      salt = [...new Uint8Array(randomSalt)]
-        .map(x => x.toString(16).padStart(2, '0'))
+      salt = Array.from(new Uint8Array(randomSalt), x => x.toString(16).padStart(2, '0'))
         .join('')
     }
 

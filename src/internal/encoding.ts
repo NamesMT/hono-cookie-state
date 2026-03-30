@@ -1,3 +1,4 @@
+/* eslint-disable e18e/prefer-static-regex */
 /* eslint-disable node/prefer-global/buffer */
 /**
  * @credit https://github.com/h3js/h3/blob/main/src/utils/internal/encoding.ts
