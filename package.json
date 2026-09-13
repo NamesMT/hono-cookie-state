@@ -2,7 +2,7 @@
   "name": "hono-cookie-state",
   "type": "module",
   "version": "0.1.6",
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.34.5",
   "description": "Simple library to persist data / states in cookies for Hono, securely and with type-safety.",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
@@ -61,15 +61,15 @@
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.3",
     "@namesmt/utils": "^0.5.18",
-    "@types/node": "^24.12.0",
-    "@vitest/coverage-v8": "^4.1.2",
-    "eslint": "^10.1.0",
+    "@types/node": "^24.13.4",
+    "@vitest/coverage-v8": "^4.1.11",
+    "eslint": "^10.10.0",
     "lint-staged": "^16.4.0",
-    "obuild": "^0.4.32",
-    "simple-git-hooks": "^2.13.1",
-    "tsx": "^4.21.0",
-    "typescript": "^6.0.2",
-    "vitest": "^4.1.2"
+    "obuild": "^0.4.40",
+    "simple-git-hooks": "^2.14.0",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11"
   },
   "pnpm": {
     "overrides": {
