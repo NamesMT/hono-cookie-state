@@ -8,7 +8,7 @@ export const textEncoder: TextEncoder = /* @__PURE__ */ new TextEncoder()
 export const textDecoder: TextDecoder = /* @__PURE__ */ new TextDecoder()
 
 // ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
-const base64Code = /* @__PURE__ */ [
+const base64Code = [
   65,
   66,
   67,
