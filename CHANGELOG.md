@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.1.7
+
+[compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.6...v0.1.7)
+
+### 🏡 Chore
+
+- Drop invalid `@__PURE__` annotation on array literal ([799b4cf](https://github.com/namesmt/hono-cookie-state/commit/799b4cf))
+- Migrate to pnpm 12 ([61b45fe](https://github.com/namesmt/hono-cookie-state/commit/61b45fe))
+
+### 🤖 CI
+
+- Use pnpm/action-setup for pnpm 12 ([1a6d283](https://github.com/namesmt/hono-cookie-state/commit/1a6d283))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.1.6
 
 [compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.5...v0.1.6)
