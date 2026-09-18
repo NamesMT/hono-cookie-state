@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.1.8
+
+[compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.7...v0.1.8)
+
+### 📦 Build
+
+- Migrate to tsdown with native import maps ([0d09a0e](https://github.com/namesmt/hono-cookie-state/commit/0d09a0e))
+
+### ✅ Tests
+
+- Add cookie state round-trip smoke test ([eb9df9f](https://github.com/namesmt/hono-cookie-state/commit/eb9df9f))
+
+### 🤖 CI
+
+- Remove stale turbo leftovers from quickcheck workflow ([147ec19](https://github.com/namesmt/hono-cookie-state/commit/147ec19))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.1.7
 
 [compare changes](https://github.com/namesmt/hono-cookie-state/compare/v0.1.6...v0.1.7)
