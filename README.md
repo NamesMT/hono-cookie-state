@@ -22,6 +22,7 @@
     * [Import and use](#import-and-use)
   * [Roadmap](#roadmap)
   * [Credits and Notes](#credits-and-notes)
+  * [Releasing](#releasing)
   * [License](#license)
 
 ## Overview
@@ -89,6 +90,14 @@ createCookieState<{ hello: string }, 'hiWorld'>({
 ## Credits and Notes
 
 This package copies the inline, rewritten [`iron-crypto.ts`](https://github.com/brc-dd/iron-webcrypto) and base64url `encoding.ts` from [h3](https://github.com/h3js/h3)
+
+## Releasing
+
+Releases are version-first and manual. Go to **Actions → Release → Run workflow**, enter the version to ship (e.g. `0.2.0`) and optionally tick `dry-run` to stop before pushing. The workflow validates the version, runs the lint/type/test gate, builds, lets changelogen bump `package.json`, write `CHANGELOG.md`, commit and tag `v<version>`, pushes that, creates the GitHub release and publishes to npm via trusted publishing (OIDC). A pushed tag publishes nothing — only a workflow dispatch does.
+
+First-time setup: publish the package once by hand, then add this repository as a trusted publisher on npmjs.com (package → Settings → Trusted Publisher), naming the workflow file `release.yml`.
+
+Local helpers: `pnpm run release:check 0.2.0` validates a version against `package.json`, `pnpm run release:preview` prints the changelog the next release would get.
 
 ## License
 
