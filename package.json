@@ -7,17 +7,25 @@
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/namesmt",
-  "homepage": "https://github.com/namesmt/hono-cookie-state#readme",
+  "homepage": "https://github.com/NamesMT/hono-cookie-state#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namesmt/hono-cookie-state.git"
+    "url": "git+https://github.com/NamesMT/hono-cookie-state.git"
   },
-  "bugs": "https://github.com/namesmt/hono-cookie-state/issues",
+  "bugs": "https://github.com/NamesMT/hono-cookie-state/issues",
   "keywords": [
     "hono",
     "middleware",
     "cookie",
-    "session"
+    "session",
+    "cookie-session",
+    "signed-cookies",
+    "encryption",
+    "iron-webcrypto",
+    "web-crypto",
+    "state-management",
+    "hono-middleware",
+    "typescript"
   ],
   "sideEffects": false,
   "imports": {

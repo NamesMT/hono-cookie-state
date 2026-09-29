@@ -53,3 +53,7 @@ Node 24 where CI runs 22. One-time trusted-publisher setup is in the README.
   `dist/` do not count.
 - `@namesmt/utils` is a devDependency but tsdown bundles its helpers into `dist/index.mjs`, so the
   published package has no runtime dependency on it — check the bundle before changing that.
+- `cookieKey` is declared in the options type but never read — the cookie name is always `key`.
+- `autoRefreshSession` refreshes when the seal is within 16 minutes of `metadata.exp` (`unix() + 960`), and the cookie is only re-set when `refreshSession` is set or `data` deep-differs from its snapshot.
+- Without an explicit `secret`, `env.COOKIE_STATE_SECRET` is used and falls back to a public constant, which only warns — always pass a real secret.
+- `repository.url` must keep the canonical `NamesMT` casing — with `--provenance`, npm fails the publish when the URL owner does not match the GitHub owner.
