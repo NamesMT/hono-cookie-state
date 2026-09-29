@@ -111,8 +111,8 @@ Local helpers: `pnpm run release:check 0.2.0` validates a version against `packa
 [npm-downloads-href]: https://npmjs.com/package/hono-cookie-state
 [codecov-src]: https://img.shields.io/codecov/c/gh/namesmt/hono-cookie-state/main?labelColor=18181B&color=F0DB4F
 [codecov-href]: https://codecov.io/gh/namesmt/hono-cookie-state
-[license-src]: https://img.shields.io/github/license/namesmt/hono-cookie-state.svg?labelColor=18181B&color=F0DB4F
-[license-href]: https://github.com/namesmt/hono-cookie-state/blob/main/LICENSE
+[license-src]: https://img.shields.io/github/license/NamesMT/hono-cookie-state.svg?labelColor=18181B&color=F0DB4F
+[license-href]: https://github.com/NamesMT/hono-cookie-state/blob/main/LICENSE
 [bundlejs-src]: https://img.shields.io/bundlejs/size/hono-cookie-state?labelColor=18181B&color=F0DB4F
 [bundlejs-href]: https://bundlejs.com/?q=hono-cookie-state
 [jsDocs-src]: https://img.shields.io/badge/Check_out-jsDocs.io---?labelColor=18181B&color=F0DB4F
