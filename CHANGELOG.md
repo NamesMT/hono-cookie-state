@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.1.10
+
+[compare changes](https://github.com/NamesMT/hono-cookie-state/compare/v0.1.9...v0.1.10)
+
+### 🩹 Fixes
+
+- Honor the cookieKey option for the cookie name ([bb2faad](https://github.com/NamesMT/hono-cookie-state/commit/bb2faad))
+
+### 📖 Documentation
+
+- Drop the fixed cookieKey gotcha ([70d54f7](https://github.com/NamesMT/hono-cookie-state/commit/70d54f7))
+
+### ❤️ Contributors
+
+- NamesMT
+
 ## v0.1.9
 
 [compare changes](https://github.com/NamesMT/hono-cookie-state/compare/v0.1.8...v0.1.9)
