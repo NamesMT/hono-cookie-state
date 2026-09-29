@@ -63,9 +63,12 @@ export interface CreateCookieStateParams<T extends Record<string, any>> {
 
   cookieOptions?: CookieOptions
 }
-export function createCookieState<T extends Record<string, any>, K extends string>({ key, secret, initData, autoRefreshSession = true, cookieOptions }: CreateCookieStateParams<T> & { key: K }): MiddlewareHandler<{
+export function createCookieState<T extends Record<string, any>, K extends string>({ key, cookieKey, secret, initData, autoRefreshSession = true, cookieOptions }: CreateCookieStateParams<T> & { key: K }): MiddlewareHandler<{
   Variables: { [key in K]: CookieState<T> }
 }> {
+  // The context variable stays keyed by `key`, the cookie name may differ
+  const cookieName = cookieKey ?? key
+
   if (!secret) {
     console.warn('[createCookieState]: No secret provided for cookie state, it is recommended to explicitly set `secret`')
     secret = env => env.COOKIE_STATE_SECRET ?? 'cookie-state-secret_cookie-state-secret'
@@ -75,7 +78,7 @@ export function createCookieState<T extends Record<string, any>, K extends strin
     const envs = env(c) as Record<string, string | undefined>
     const secretPwd = typeof secret === 'function' ? secret(envs) : secret
 
-    const pDCookie = getCookie(c, key)
+    const pDCookie = getCookie(c, cookieName)
     const pD = pDCookie
       ? await unseal(pDCookie, secretPwd, sealDefaults).catch(() => ({})) as { data?: T, metadata?: Record<string, any> }
       : null
@@ -98,7 +101,7 @@ export function createCookieState<T extends Record<string, any>, K extends strin
 
       setCookie(
         c,
-        key,
+        cookieName,
         await seal(
           {
             metadata: CSI.metadata,
