@@ -37,6 +37,27 @@ pnpm run release:preview  # print the changelog the next release would get
 - ESM only: `"type": "module"` with an import-only `exports` map; do not add a CJS build.
 - `#src/*` is a native import-map alias for `./src/*`; test imports keep the `.js` suffix.
 
+## How to work here
+
+- Check callers before changing it; say when impact is unclear.
+- Never overwrite a large section you have not understood.
+- Do not invent requirements; surface what looks needed.
+- Report the risk, not just the change: correctness, security, operational, integration.
+- **Fix the root cause, not the instance.** A copied helper, a rule stated twice or a bypassed guard
+  is one class: one implementation, one guard — the work itself, not a follow-up to ask for.
+- Verify before claiming, and say which direction; a passing test is not proof it pinned anything.
+- No recall of this project? Read this file, `README.md` and `git log` first.
+
+## Conciseness (applies everywhere)
+
+Prune verbose, keep correctness. A comment only for non-obvious intent; one idea per sentence; delete
+history `git log` already holds, keeping the rule; never drop a caveat to save a line.
+
+## User-facing docs
+
+`README.md` is the only hand-written doc — `docs/` is generated TypeDoc, never edited. Concise first
+read, depth behind `<details>`, visuals for skimmers; docs ship in the same commit as the change.
+
 ## Releasing
 
 Manual and version-first: dispatch **Actions → Release → Run workflow** with the version; only that
