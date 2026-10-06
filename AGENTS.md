@@ -4,6 +4,20 @@
 that persists a typed state object in a signed, encrypted cookie (inlined `iron-webcrypto`).
 Node >= 22.14.0, [tsdown](https://github.com/rolldown/tsdown) build, Vitest.
 
+## Docs
+
+Three tiers, so a reader loads only what the task needs:
+
+1. **`AGENTS.md`** (this file) — orientation and the rules that prevent defects. Read every session.
+2. **`.agentDocs/`** — depth that would bloat this file: module rationale, traps with their causes,
+   compatibility rules. Read on demand.
+3. **`README.md` / `docs/`** — for a person using the package, not for an agent.
+
+**There is no `.agentDocs/` here yet and none is needed at this size.** Create one when a section
+above outgrows a screen or two: move the *reasoning* out and keep the *rule* here with a pointer to
+it — nobody reads a file they do not open. Each document opens with a one-line scope, and this file
+links it.
+
 ## Commands
 
 ```sh
@@ -37,20 +51,6 @@ pnpm run release:preview  # print the changelog the next release would get
 - ESM only: `"type": "module"` with an import-only `exports` map; do not add a CJS build.
 - `#src/*` is a native import-map alias for `./src/*`; test imports keep the `.js` suffix.
 
-## Docs
-
-Three tiers, so a reader loads only what the task needs:
-
-1. **`AGENTS.md`** (this file) — orientation and the rules that prevent defects. Read every session.
-2. **`.agentDocs/`** — depth that would bloat this file: module rationale, traps with their causes,
-   compatibility rules. Read on demand.
-3. **`README.md` / `docs/`** — for a person using the package, not for an agent.
-
-**There is no `.agentDocs/` here yet and none is needed at this size.** Create one when a section
-above outgrows a screen or two: move the *reasoning* out and keep the *rule* here with a pointer to
-it — nobody reads a file they do not open. Each document opens with a one-line scope, and this file
-links it.
-
 ## How to work here
 
 - Check callers before changing it; say when impact is unclear.
@@ -59,10 +59,10 @@ links it.
 - Report the risk, not just the change: correctness, security, operational, integration.
 - **Fix the root cause, not the instance.** A copied helper, a rule stated twice or a bypassed guard
   is one class: one implementation, one guard — the work itself, not a follow-up to ask for.
-- Verify before claiming, and say which direction; a passing test is not proof it pinned anything.
+- **Verify before claiming, and say what you checked.** A green test proves only what it asserts — **break the thing it guards and watch it fail.** If it still passes, either the test is decoration or a different guard is running; find out which. Where a stub cannot answer the question, drive the real thing. Mark anything unverified as unverified.
 - No recall of this project? Read this file, `README.md` and `git log` first.
 
-## Conciseness (applies everywhere)
+## Conciseness
 
 Prune verbose, keep correctness. A comment only for non-obvious intent; one idea per sentence; delete
 history `git log` already holds, keeping the rule; never drop a caveat to save a line.
