@@ -55,8 +55,8 @@ history `git log` already holds, keeping the rule; never drop a caveat to save a
 
 ## User-facing docs
 
-`README.md` is the only hand-written doc — `docs/` is generated TypeDoc, never edited. Concise first
-read, depth behind `<details>`, visuals for skimmers; docs ship in the same commit as the change.
+`README.md` is the only hand-written doc — `docs/` is generated TypeDoc, never edited. Keep it a **concise first read**; put
+depth in `<details>` spoilers and add visuals where they help. Docs ship in the same commit as the change.
 
 ## Releasing
 
